@@ -23,6 +23,12 @@ const initData = {
   activeNote: initNote
 };
 
+//模拟用户登录信息
+const correctUser = {
+  username: "slaven",
+  password: '123456'
+};
+
 export const initStore = ({ dispatch }) => {
   dispatch('INIT_STORE', initData);
 };
@@ -39,3 +45,11 @@ export const editNote = makeAction('EDIT_NOTE');
 
 // 更新列表展示
 export const updateShow = makeAction('SET_SHOW_ALL');
+
+//用户登录
+export const loginValidation  = (store,user) => {
+  if (user.username == correctUser.username && user.password == correctUser.password){
+    return '';
+  }
+  return 'incorrect username or password!'
+}
