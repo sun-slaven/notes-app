@@ -7,10 +7,9 @@
 </template>
 
 <script>
-  import Toolbar from './Toolbar';
-  import NotesList from './NotesList';
-  import Editor from './Editor';
-  //import store from '../vuex/store'
+  import Toolbar from '../components/Toolbar';
+  import NotesList from '../components/NotesList';
+  import Editor from '../components/Editor';
   import { activeNote } from '../vuex/getters';
   import { initStore } from '../vuex/actions';
 

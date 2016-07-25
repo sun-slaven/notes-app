@@ -7,10 +7,21 @@
 
 </template>
 <style>
+  html {
+    height: 100%;
+  }
 
+  body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  #root {
+    width: 100%;
+  }
 </style>
 <script>
-  import store from '../vuex/store'
+  import store from './vuex/store'
 
   export default{
     component: {

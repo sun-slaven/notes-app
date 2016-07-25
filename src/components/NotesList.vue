@@ -1,7 +1,7 @@
 <template>
   <div id="notes-list">
     <div id="list-header">
-      <h4>Notes | sunwenfeng.com</h4>
+      <h3>Notes | sunwenfeng.com</h3>
       <div class="btn-group btn-group-justified" role="group">
         <!-- all -->
         <div class="btn-group" role="group">
@@ -26,9 +26,9 @@
            class="list-group-item" href="#"
            :class="{active: activeNote === note}"
            @click="updateActiveNote(note)">
-          <h6 class="list-group-item-heading">
+          <h4 class="list-group-item-heading">
             {{note.title.trim().substring(0,30)}}
-          </h6>
+          </h4>
         </a>
       </div>
     </div>
@@ -47,7 +47,6 @@
   }
   #list-body {
     padding-top: 20px;
-    padding-bottom: 20px;
   }
   .list-group-item.active {
     border-radius: 0px;

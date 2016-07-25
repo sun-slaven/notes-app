@@ -9,7 +9,9 @@ Vue.use(Vuex);
 const state = {
   notes: [],
   activeNote:{},
-  show: ''
+  show: '',
+
+  logged: false
 };
 
 // 任何一个 Mutation handler 的第一个参数永远为所属 store 的整个 state 对象
@@ -67,6 +69,10 @@ const mutations = {
   SET_ACTIVE_NOTE(state, note) {
     state.activeNote = note;
   },
+
+  CHANGE_LOGGED_STATE(state){
+    state.logged = !state.logged
+  }
 
 };
 

@@ -49,7 +49,9 @@ export const updateShow = makeAction('SET_SHOW_ALL');
 //用户登录
 export const loginValidation  = (store,user) => {
   if (user.username == correctUser.username && user.password == correctUser.password){
-    return '';
+    store.dispatch('CHANGE_LOGGED_STATE')
+    return ''
+  }else{
+    return 'incorrect username or password!'
   }
-  return 'incorrect username or password!'
 }
