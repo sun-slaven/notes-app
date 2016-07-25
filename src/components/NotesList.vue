@@ -1,7 +1,7 @@
 <template>
   <div id="notes-list">
     <div id="list-header">
-      <h2>Notes | sunwenfeng.com</h2>
+      <h3>Notes | sunwenfeng.com</h3>
       <div class="btn-group btn-group-justified" role="group">
         <!-- all -->
         <div class="btn-group" role="group">
@@ -34,7 +34,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
   #notes-list{
     width: 30%;
     float: left;

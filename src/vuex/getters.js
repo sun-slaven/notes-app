@@ -23,3 +23,7 @@ export const filteredNotes = (state) => {
   }
 };
 
+export const logged = (state) => {
+  return state.logged
+}
+

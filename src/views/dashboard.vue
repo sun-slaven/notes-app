@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app">
+  <div id="dashboard" class="dashboard">
     <toolbar></toolbar>
     <notes-list></notes-list>
     <editor v-if="activeNote"></editor>
@@ -7,10 +7,9 @@
 </template>
 
 <script>
-  import Toolbar from './Toolbar';
-  import NotesList from './NotesList';
-  import Editor from './Editor';
-  import store from '../vuex/store'
+  import Toolbar from '../components/Toolbar';
+  import NotesList from '../components/NotesList';
+  import Editor from '../components/Editor';
   import { activeNote } from '../vuex/getters';
   import { initStore } from '../vuex/actions';
 
@@ -21,7 +20,6 @@
       NotesList,
       Editor
     },
-    store,
     vuex: {
       //此处的actions用来被当前页面以及js环境使用
       actions: {
@@ -37,7 +35,7 @@
   }
 </script>
 
-<style>
+<style scoped>
 html {
   height: 100%;
 }
@@ -48,7 +46,7 @@ body {
   justify-content: center;
   height: 100%;
 }
-  #app {
+  #dashboard {
     height: 100%;
   }
 </style>

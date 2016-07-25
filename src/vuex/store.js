@@ -9,7 +9,9 @@ Vue.use(Vuex);
 const state = {
   notes: [],
   activeNote:{},
-  show: ''
+  show: '',
+
+  logged: false
 };
 
 // 任何一个 Mutation handler 的第一个参数永远为所属 store 的整个 state 对象
@@ -33,16 +35,16 @@ const mutations = {
   },
   // 修改笔记
   EDIT_NOTE(state,note){
-    console.log(note)
+    console.log(note);
     state.activeNote = note;
     // 修改原始数据
     for (var i = 0; i < state.notes.length; i++) {
       if(state.notes[i].id === note.id){
         //state.notes[i] = note   //不能使用索引修改数组里的元素，因为这样不会触发vuejs的视图更新
-        state.notes.$set(i,note)
+        state.notes.$set(i,note);
         break;
       }
-    };
+    }
   },
   // 删除笔记
   DELETE_NOTE(state) {
@@ -66,7 +68,12 @@ const mutations = {
   // 设置当前激活的笔记
   SET_ACTIVE_NOTE(state, note) {
     state.activeNote = note;
+  },
+
+  CHANGE_LOGGED_STATE(state){
+    state.logged = !state.logged
   }
+
 };
 
 export default new Vuex.Store({
