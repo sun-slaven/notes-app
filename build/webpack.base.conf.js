@@ -26,20 +26,7 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]//当出现 Node.js 模块依赖查找失败的时候，可以尝试设置 resolve.fallback 和 resolveLoader.fallback 来解决问题。
   },
   module: {
-    preLoaders: [
-      // {
-      //   test: /\.vue$/,
-      //   loader: 'eslint',
-      //   include: projectRoot,
-      //   exclude: /node_modules/
-      // },
-      // {
-      //   test: /\.js$/,
-      //   loader: 'eslint',
-      //   include: projectRoot,
-      //   exclude: /node_modules/
-      // }
-    ],
+    preLoaders: [],
     loaders: [
       {
         test: /\.vue$/,

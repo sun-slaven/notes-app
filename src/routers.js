@@ -4,6 +4,10 @@
 
 export default (router) => {
   router.map({
+    '/':{
+      name: 'dashboard',
+      component: require('./views/dashboard.vue')
+    },
     '/dashboard': {
       name: 'dashboard',
       component: function (resolve) {//router的异步加载

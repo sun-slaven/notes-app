@@ -10,7 +10,6 @@
   html {
     height: 100%;
   }
-
   body {
     display: flex;
     justify-content: center;
@@ -21,6 +20,7 @@
   }
 </style>
 <script>
+  import 'bootstrap/dist/css/bootstrap.css'
   import store from './vuex/store'
 
   export default{
